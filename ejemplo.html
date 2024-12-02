@@ -1,36 +1,33 @@
 <html>
-  <head>
-    <style>
-      #demo 1{
-        background: rgb(219,35,55)
-        width: 70%
-        height: 100px
-      }
-          #demo2 {
-        background: rgb(238,235,245)
-        width: 70%
-        height: 100px
-          }
-          #demo3 {
-        background: rgb(219,235,215)
-        width: 70%
-        height: 100px
-      }</style>
-  </head>
-  <body>
-    <h3> Mi trabajo javascript</h3>
-    <h2 id="demo1"> encabezado usando la hoja de estilos 1</h2>
-      <h2 id="demo2"> encabezado usando la hoja de estilos 2</h2>
-      <h2 id="demo3"> encabezado usando la hoja de estilos 3</h2>
-    <script>
-      var nombre  = prompt ("escribe tu nombre");
-      document.write ("El nombre que has introducido por teclado es: " +nombre);
-var numero1 = prompt ("Escribe tu número favorito")
-       var numero2 = prompt ("Escribe tu segundo número favorito")
-             document.write ("el resultado de la suma es: " +numero1+numero2);
-
+<head>
+<style>
+#demo1 { background: rgb(119, 193, 155)
+       width: 70%
+       height: 100px }
+  #demo2 {  background: rgb(19, 24, 27)
+       width: 70%
+       height: 100px }
+  #demo3 {  background: rgb(80, 99, 123)
+       width: 70%
+       height: 100px }
+</style>
+</head> 
+<body>
+<h3>Mi trabajo javascript</h3>
+  <h2 id="demo1"> encabezado usando la hoja de estilos 1</h2>
+ <h2 id="demo2"> encabezado usando la hoja de estilos 2</h2>
+   <h2 id="demo3"> encabezado usando la hoja de estilos 3</h2>
+<script>
+var nombre = prompt ("Escribe tu nombre");
+document.write ("El nombre que has introducido por teclado es: " +nombre);
+var numero1 = prompt ("Escribe tu numero favorito");
+       var numero2 = prompt ("Escribe tu segundo numero favorito");
+       numero1= Number(numero1);
+       numero2= Number(numero2);
+      var resultado = numero1+numero2;
+       document.write ("<h3 id='demo3'>El resultado de la suma es: </h3>" + resultado);
+      document.write ("<h3 id='demo3'>El resultado de la multiplicación es: </h3>" + numero1*numero2);
 </script>
-    </script>
-  </body>
+</body>
 </html>
   
