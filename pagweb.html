@@ -27,51 +27,16 @@
          </ul>
          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Shinjuku_central_park_southwest.jpg" width="300">
        </p>
-        <script>
- <script>
-      var nombre = prompt ("Escribe tu nombre: ");
-      document.write ("<h3 id='demo1'>El nombre que has introducido por teclado es: " +nombre);
-      document.write ("</h3>");
-      var numero1 = prompt ("Escribe tu numero favorito:");
-      var numero2 = prompt ("Escribe tu segundo numero favorito:");       
-      numero1 = Number(numero1);
-      numero2 = Number(numero2);
-      var resultado = numero1+numero2; //Muestra el resultado de la suma
-      resultado= resultado.toFixed(3); //redondea el resultado a tres decimales
-      document.write ("<h3 id='demo1'>El resultado de la suma es:" + resultado);
-      document.write ("</h3>");
-      document.write ("<h3 id='demo1'>El resultado de la multiplicación es:" + numero1*numero2);
-      document.write ("</h3>");
-  
-      document.write (numero1 - numero2); // Resta
-      document.write ("<br>");
-      document.write (numero1 * numero2); // Multiplicación
-      document.write ("<br>");
-      document.write (numero1 / numero2); // División
-      document.write ("<br>");
-      document.write (numero1 % numero2); // Módulo
-      document.write ("<br>");
-      document.write (numero1 ** numero2); // Exponente
-      document.write ("<br><br><br>");
-
-     
-      var edad = prompt ("¿Cuantos años tienes?");       
-      edad = Number(edad);
-      if (edad == 18) 
-              {
-              document.write("TIENES 18 AÑOS");
-              }
-              else {
-                if (edad > 18) 
-                  {
-                    document.write("Eres mayor de edad");
-                  }
-                else
-                  {
-                    document.write ("Aún eres joven!");
-                  }  
-              }      
-    </script>
+     <script>
+var nombre = prompt ("Escribe tu nombre");
+document.write ("El nombre que has introducido por teclado es: " +nombre);
+var numero1 = prompt ("Escribe tu numero favorito");
+       var numero2 = prompt ("Escribe tu segundo numero favorito");
+       numero1= Number(numero1);
+       numero2= Number(numero2);
+      var resultado = numero1+numero2;
+       document.write ("<h3 id='demo3'>El resultado de la suma es: </h3>" + resultado);
+   /   document.write ("<h3 id='demo3'>El resultado de la multiplicación es: </h3>" + numero1*numero2);
 </script>
     </body>
 </h
