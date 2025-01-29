@@ -5,29 +5,30 @@
     </head>
     <body>    
    
-        <h1> Mi 8ª web de fiobonacci</h1>
+        <h1> Mi 8ª web de fibonacci</h1>
           <script>
             document.write ("<br>");
               
             var numero =  prompt("Introduzca un número entre 1 y 100:");
             numero = Number(numero);
-            if (numero < 1 || numero > 100)
+            while (numero < 1 || numero > 100)
             {
        numero = prompt("Número inválido. Introduzca un número entre 1 y 100:");
        numero = Number (numero);
             }
                      
-            var suma = 0; 
-            var i = 1;
+            var a = 0; 
+            var b = 1;
 
         
-       function fibonacciIterativo(n) {
-  let fib = [0, 1];
-  for (let i = 2; i <= n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
-  }
-  return fib[n];
-}
+            for (i = 1; i <= numero; i++) {
+                c = a + b;
+                     document.write ("<br>La serie de fibonacci "+c);
+                a = b;
+                b = c;
+       
+            }
+
           </script>
 </body>
 </html>
