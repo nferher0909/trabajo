@@ -1,4 +1,4 @@
-function pedirnumeroEnRango(min, max) {
+function pedirNumeroEnRango(min, max) {
   var numero;
   do
   {
