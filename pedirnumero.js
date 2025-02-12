@@ -1,9 +1,10 @@
-function pedirnumeroEnRango(1, 10) {
+function pedirnumeroEnRango(min, max) {
   var numero;
-  do {
-    numero = prompt("Ingrese un número entre " + 1 +" y " + 10 + ":");
+  do
+  {
+    numero = prompt("Ingrese un número entre " + min +" y " + max + ":");
     numero = Number(numero); 
-  } while (numero < 1 || numero > 10);
+  } while (numero < min || numero > max);
 
   return numero;
 }
