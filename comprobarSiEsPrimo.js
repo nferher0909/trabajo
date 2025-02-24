@@ -6,7 +6,7 @@
                 {
                     if (numero % i == 0) {
                             esPrimo = false;
-                        
+                         return esPrimo;
                             }
                  }
                  esPrimo = true;
