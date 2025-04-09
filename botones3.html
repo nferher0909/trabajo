@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>¡Salúdame!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            max-width: 300px;           
+            margin: 0 auto;                   
+            padding: 20px;                    
+            text-align: center;              
+            background-color: lightblue;  
+        }
+        input {
+            padding: 10px;                   
+            margin-bottom: 10px;             
+            width: 200px;                    
+        }
+        button {
+            padding: 8px 15px;              
+            margin: 5px;                      
+            cursor: pointer;                  
+            background-color: #4CAF50;       
+            color: white;                    
+            border: none;                     
+            border-radius: 4px;               
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+       
+        .contenedor {
+            background-color: white;        
+            padding: 30px 40px;             
+            border-radius: 15px;              
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+            text-align: center;         
+        }
+        h1 {
+            margin-bottom: 20px;             
+            color: #234;                    
+        }
+        #mensaje {
+            margin-top: 20px;                
+            font-size: 18px;                 
+            color: #264;                   
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="contenedor">
+        <h1>¿Cómo te llamas?</h1>
+     
+        <input type="text" id="entradaNombre" placeholder="Teclea tú nombre aquí"><br>
+     
+        <button id="botonSaludar">Saludar</button>
+
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+      
+        var nombre, mensajeDiv;
+        document.getElementById('botonSaludar').addEventListener('click', function() {
+
+            nombre = document.getElementById('entradaNombre').value;
+          
+            mensajeDiv = document.getElementById('mensaje');
+        
+            if (nombre) {
+                mensajeDiv.textContent = ("Hola, " + nombre + " ¡Bienvenido a clase!");
+            } 
+      
+            else {
+                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte!");
+            }
+        });
+    </script>
+</body>
+</html>
