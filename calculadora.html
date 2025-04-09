@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simple</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;  
+            max-width: 300px;              
+            margin: 0 auto;                  
+            padding: 20px;              
+            text-align: center;          
+            background-color: lightblue;     
+        }
+        input {
+            padding: 10px;                   
+            margin-bottom: 10px;           
+            width: 200px;                  
+        }
+        button {
+            padding: 8px 15px;           
+            margin: 5px;                    
+            cursor: pointer;
+            background-color: #4CAF50;      
+            color: white;                  
+            border: none;                    
+            border-radius: 4px;          
+        }
+        #resultado {
+            margin-top: 20px;             
+            padding: 10px;                
+            border: 1px solid #ddd;       
+            min-height: 20px;            
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora Simple</h2>   
+    <input type="number" id="entrada1" placeholder="Primer número" value="13"><br>   
+    <input type="number" id="entrada2" placeholder="Segundo número" value ="666"><br>
+    
+    <button id="buttonSumar">Sumar</button>
+    <button id="buttonMultiplicar">Multiplicar</button>
+      
+    <div id="resultado"></div> 
+    
+    <script>
+        var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
+    
+        document.addEventListener('DOMContentLoaded', function() {
+      numero1 = document.getElementById('entrada1'); 
+            numero2 = document.getElementById('entrada2');
+            resultado = document.getElementById('resultado');
+            botonSumar = document.getElementById('buttonSumar');
+            botonMultiplicar = document.getElementById('buttonMultiplicar');
+
+            botonSumar.addEventListener('click', function() {
+                num1 = Number(numero1.value);
+                num2 = Number(numero2.value);
+             
+               resultado.textContent = (num1 + " sumado a  " + num2 +" es igual a "+ (num1+num2));
+            });
+
+            botonMultiplicar.addEventListener('click', function() {
+                num1 = Number(numero1.value);
+                num2 = Number(numero2.value);
+
+                resultado.textContent = ( num1 + " multiplicado por "+ num2 + " es igual a "+ (num1*num2));
+            });
+         
+        });
+    </script>
+</body>
+</html>
