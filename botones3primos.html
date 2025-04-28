@@ -1,1 +1,88 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>¡Salúdame!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            max-width: 300px;           
+            margin: 0 auto;                   
+            padding: 20px;                    
+            text-align: center;              
+            background-color: lightblue;  
+        }
+        input {
+            padding: 10px;                   
+            margin-bottom: 10px;             
+            width: 200px;                    
+        }
+        button {
+            padding: 8px 15px;              
+            margin: 5px;                      
+            cursor: pointer;                  
+            background-color: #4CAF50;       
+            color: white;                    
+            border: none;                     
+            border-radius: 4px;               
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+       
+        .contenedor {
+            background-color: white;        
+            padding: 30px 40px;             
+            border-radius: 15px;              
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+            text-align: center;         
+        }
+        h1 {
+            margin-bottom: 20px;             
+            color: #234;                    
+        }
+        #mensaje {
+            margin-top: 20px;                
+            font-size: 18px;                 
+            color: #264;                   
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="contenedor">
+        <h1>¿Cómo te llamas?</h1>
+     
+                mensajeDiv.textContent = ("");
+        <input type="Number" id="entradaNumber" placeholder="Teclea un número aquí"><br>
+     
+        <button id="botonCalcular">Calcular</button>
+
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+      
+        var numero, mensajeDiv, esPrimo;
+        document.getElementById('botonCalcular').addEventListener('click', function() {
+
+            nombre = document.getElementById('entradaNumber').value;
+          numero = Number(numero);
+            mensajeDiv = document.getElementById('mensaje');
+        esPrimo = comprobarEsPrimo(numero);
+            if (esPrimo) {
+                mensajeDiv.textContent = (" el " + numero + " es primo ");
+            } 
+      
+            else {
+                mensajeDiv.textContent = (" El " + numero + " no es primo");
+      
+            }
+        });
+    </script>
+</body>
+</html>
+
