@@ -9,7 +9,6 @@
 
     
     <script>
-      // EJEMPLO DE UN OBJETO TIPO PERSONA
       const persona =
         { 
          
@@ -21,14 +20,17 @@
           saludar () {
             const output = document.getElementById('resultado-persona');
             output.innerHTML = 'HOLA MI NOMBRE ES ${this.nombre} Y TENGO ${this.edad} AÑOS'; 
-          }
+                  }
+      };
+      const coche = {
+          marca: "TOYOTA",
+          modelo: "LEON",
+          año: 2020,
+          encendido: false,
+      }
           
-        };
-         console.log(persona.nombre);
-            console.log(persona.edad);
-            console.log(persona.ciudad);
-            console.log(persona.zodiaco);
-            console.log(persona.serie);
+      
+
       
     </script>
   </body>
