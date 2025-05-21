@@ -1,34 +1,51 @@
-<html>
+ <html>
   <head>
     <title> PAGINA con ejemplos de objetos en JAVASCRIPT</title>
   </head>
   <body>
    <h2> MI PRIMER OBJETO:</h2>
    <button onclick="persona.saludar()"> SALUDAR</button>
-   <div id="resultado-persona"> </div>
+   <div id="resultado-persona">  </div>
 
     
     <script>
       const persona =
         { 
-         
-          nombre: "Noelia",
+          nombre: "noelia", 
           edad: 16,
-          ciudad: "Almería",
-          zodiaco: "virgo",
-          serie: "YOU",
+          Ciudad: "almeria",
+          Signo_Zodiacal: "virgo",
           saludar () {
             const output = document.getElementById('resultado-persona');
-            output.innerHTML = 'HOLA MI NOMBRE ES ${this.nombre} Y TENGO ${this.edad} AÑOS'; 
-                  }
+            output.innerHTML = `HOLA MI NOMBRE ES ${this.nombre} Y TENGO ${this.edad} AÑOS  Y MI SIGNO ES ${this.Signo_Zodiacal} `; 
+          }
       };
       const coche = {
-          marca: "TOYOTA",
-          modelo: "LEON",
+          marca: "Toyota",
+          modelo: "Leon",
           año: 2020,
           encendido: false,
-      }
-          
+          arrancar () {
+            if ( this.encendido = false)
+                {
+                  this.encendido = true;
+                  return " El coche está encendido";
+                }
+            
+          },
+          parar (){
+            if ( this.encendido = true)
+                {
+                  this.encendido = false;
+                  return " El coche está parado";
+                }
+            
+          }
+      };
+      
+    </script>
+  </body>
+</html>
       
 
       
