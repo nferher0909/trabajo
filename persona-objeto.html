@@ -1,28 +1,35 @@
 <html>
   <head>
-    <title>PÁGINA con ejemplos en javascript</title>
+    <title> PAGINA con ejemplos de objetos en JAVASCRIPT</title>
   </head>
   <body>
-    <h2>MI PRIMER OBJETO:</h2>
-    <BUTTON> SALUDAR</BUTTON>
-    <div id="resultado persona"> </div>
+   <h2> MI PRIMER OBJETO:</h2>
+   <button onclick="persona.saludar()"> SALUDAR</button>
+   <div id="resultado-persona"> </div>
+
+    
     <script>
+      // EJEMPLO DE UN OBJETO TIPO PERSONA
       const persona =
-        {
+        { 
+         
           nombre: "Noelia",
           edad: 16,
           ciudad: "Almería",
           zodiaco: "virgo",
           serie: "YOU",
           saludar () {
-             const output = document.getElementById('resultado-persona');
-            output.innerHTML = "HOLA A TODOS";
+            const output = document.getElementById('resultado-persona');
+            output.innerHTML = 'HOLA MI NOMBRE ES ${this.nombre} Y TENGO ${this.edad} AÑOS'; 
+          }
+          
         };
-            console.log(persona.nombre);
+         console.log(persona.nombre);
             console.log(persona.edad);
             console.log(persona.ciudad);
             console.log(persona.zodiaco);
             console.log(persona.serie);
+      
     </script>
   </body>
 </html>
