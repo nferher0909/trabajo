@@ -1,54 +1,90 @@
- <html>
+
+<html>
   <head>
     <title> PAGINA con ejemplos de objetos en JAVASCRIPT</title>
-  </head>
-  <body>
-   <h2> MI PRIMER OBJETO:</h2>
-   <button onclick="persona.saludar()"> SALUDAR</button>
-   <div id="resultado-persona">  </div>
 
     
-    <script>
-      const persona =
-        { 
-          nombre: "noelia", 
-          edad: 16,
-          Ciudad: "almeria",
-          Signo_Zodiacal: "virgo",
-          saludar () {
-            const output = document.getElementById('resultado-persona');
-            output.innerHTML = `HOLA MI NOMBRE ES ${this.nombre} Y TENGO ${this.edad} AÑOS  Y MI SIGNO ES ${this.Signo_Zodiacal} `; 
-          }
-      };
-      const coche = {
-          marca: "Toyota",
-          modelo: "Leon",
-          año: 2020,
-          encendido: false,
-          arrancar () {
-            if ( this.encendido = false)
-                {
-                  this.encendido = true;
-                  return " El coche está encendido";
-                }
-            
-          },
-          parar (){
-            if ( this.encendido = true)
-                {
-                  this.encendido = false;
-                  return " El coche está parado";
-                }
-            
-          }
-      };
-      
-    </script>
-  </body>
-</html>
-      
+    <style>
+        .ejemplo {
+            border: 1px solid #ccc;  
+            padding: 20px;          
+            margin: 20px;            
+            border-radius: 10px;   
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;         
+            padding: 10px;       
+            border: none;
+            cursor: pointer;         
+            margin: 5px;           
+        }
+        
+        .resultado {
+            background-color: #f0f0f0; 
+            padding: 10px;
+            margin: 10px 0;         
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplos de Objetos en JavaScript</h1>
 
-      
+    <div class="ejemplo">
+        <h2>1. Objeto Persona</h2>
+        <button onclick="persona.saludar()">Saludar</button>
+        <div id="resultado-persona" class="resultado"></div>
+    </div>
+
+    <div class="ejemplo">
+        <h2>2. Objeto Coche</h2>
+        <button onclick="manejarCoche('encender')">Encender</button>
+        <button onclick="manejarCoche('apagar')">Apagar</button>
+        <div id="resultado-coche" class="resultado"></div>
+    </div>
+    
+
+    <script>
+        const persona = {
+            nombre: "Noelia",
+            edad: 16,
+            ciudad: "Almeria",
+            
+            saludar() {
+                const output = document.getElementById('resultado-persona');
+                output.innerHTML = `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+            }
+        };
+
+        const coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            año: 2020,
+            encendido: false,
+        
+            encender() {
+                if (!this.encendido) {
+                    this.encendido = true;
+                    return "El coche se ha encendido.";
+                }
+                return "El coche ya está encendido.";
+            },
+            
+           
+            apagar() {
+                if (this.encendido) {
+                    this.encendido = false;
+                    return "El coche se ha apagado.";
+                }
+                return "El coche ya está apagado.";
+            }
+        };
+
+        function manejarCoche(accion) {
+            const output = document.getElementById('resultado-coche');
+            output.innerHTML = coche[accion]();
+        }
     </script>
-  </body>
+</body>
 </html>
