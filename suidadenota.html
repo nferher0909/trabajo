@@ -56,19 +56,19 @@
     <script>
         document.getElementById('botonSaludar').addEventListener('click', function() {
             var entrada = document.getElementById('entradaNombre');
-
-
-
-
-
-
-            
+  var texto = entrada.value.trim();
             var mensaje = document.getElementById('mensaje');
 
             if (texto !== '') {
                 var p = document.createElement('p');
                 p.textContent = texto;
-                mensaje.appendChild(p);
+
+
+
+
+
+
+                
                 entrada.value = '';
             } else {
                 alert('¡Apunta una tarea!');
