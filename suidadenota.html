@@ -48,7 +48,7 @@
 <body>
     <div class="contenedor">
         <h1>Apunta aquí tus tareas</h1>
-        <input type="text" id="entradaNombre" placeholder="Teclea tus tareas aquí"><br>
+        <input type="text" id="entradaNombre" placeholder="Introduce tus tareas aquí"><br>
         <button id="botonSaludar">Apuntar</button>
         <div id="mensaje"></div>
     </div>
@@ -56,7 +56,13 @@
     <script>
         document.getElementById('botonSaludar').addEventListener('click', function() {
             var entrada = document.getElementById('entradaNombre');
-            var texto = entrada.value.trim();
+
+
+
+
+
+
+            
             var mensaje = document.getElementById('mensaje');
 
             if (texto !== '') {
